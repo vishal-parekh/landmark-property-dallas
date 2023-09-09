@@ -1,0 +1,11 @@
+{
+  "printWidth": 80,
+  "semi": true,
+  "singleQuote": false,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "importOrder": ["<THIRD_PARTY_MODULES?"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
