@@ -1,28 +1,23 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { injectStyle } from "react-toastify/dist/inject-style";
+import { FormValues } from "types/form";
 
 if (typeof window !== "undefined") {
   injectStyle();
 }
 
-interface FormValues {
-  senderName: string;
-  senderPhoneNumber: number;
-  senderEmail: string;
-  senderHomeAddress: string;
-}
-
-export const Main = () => {
+export const LandingHero = () => {
   const [values, setValues] = useState<FormValues>();
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values!, [event.target.name]: event.target.value });
   };
+  const toastError = () => toast.error("Submission Failed");
   const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      await fetch("/api/email", {
+      const response = await fetch("/api/email", {
         method: "POST",
         body: JSON.stringify({
           senderName: values?.senderName,
@@ -31,15 +26,27 @@ export const Main = () => {
           senderHomeAddress: values?.senderHomeAddress,
         }),
       });
-      toast.success("Submission successful!");
-    } catch (error) {}
+      /* eslint-disable no-console */
+      if (response.ok) {
+        toast.success("Submission successful!");
+      } else {
+        console.error(
+          `Failed to send email. Error - ${response.status}: ${response.statusText}`,
+        );
+        toastError();
+      }
+    } catch (error) {
+      console.error(`Error (likely due to network issue): ${error}`);
+      toastError();
+    }
+    /* eslint-enable no-console */
   };
   return (
     <div id="contact" className="w-full  m-auto">
       <div className="max-w-[1240px] px-2 pt-40 w-full m-auto">
         <div className="grid md:grid-cols-10 gap-12">
           {/* left */}
-          <div className="flex items-center md:col-span-5">
+          <div className="flex items-center pl-10 md:col-span-5">
             <div className="white-space:nowrap">
               <p className="uppercase text-sm tracking-widest text-gray-600">
                 We buy houses fast, easy, and hassle-free.

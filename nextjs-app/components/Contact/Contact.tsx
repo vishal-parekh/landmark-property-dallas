@@ -1,10 +1,51 @@
 import ContactImg from "/public/assets/contact.png";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { ToastContainer, toast } from "react-toastify";
+import { injectStyle } from "react-toastify/dist/inject-style";
+import { FormValues } from "types/form";
+
+if (typeof window !== "undefined") {
+  injectStyle();
+}
 
 export const Contact = () => {
+  const [values, setValues] = useState<FormValues>();
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValues({ ...values!, [event.target.name]: event.target.value });
+  };
+  const toastError = () => toast.error("Submission Failed");
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify({
+          senderName: values?.senderName,
+          senderPhoneNumber: values?.senderPhoneNumber,
+          senderEmail: values?.senderEmail,
+          senderHomeAddress: values?.senderHomeAddress,
+        }),
+      });
+      /* eslint-disable no-console */
+      if (response.ok) {
+        toast.success("Submission successful!");
+      } else {
+        console.error(
+          `Failed to send email. Error - ${response.status}: ${response.statusText}`,
+        );
+        toastError();
+      }
+    } catch (error) {
+      console.error(`Error (likely due to network issue): ${error}`);
+      toastError();
+    }
+    /* eslint-enable no-console */
+  };
   return (
     <div id="contact" className="w-full lg:h-screen">
       <div className="max-w-[1240px] m-auto px-2 w-full ">
@@ -45,13 +86,18 @@ export const Contact = () => {
           {/* right */}
           <div className="col-span-2 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
             <div className="p-4">
-              <form>
+              <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="flex flex-col">
+                  <ToastContainer />
                   <label className="uppercase text-sm py-2">Name</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
-                    name="name"
+                    id="senderName"
+                    name="senderName"
+                    placeholder="Enter name here..."
+                    required
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -59,7 +105,11 @@ export const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
-                    name="phone"
+                    id="senderPhoneNumber"
+                    name="senderPhoneNumber"
+                    placeholder="Enter phone number here..."
+                    required
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -67,7 +117,11 @@ export const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
-                    name="subject"
+                    id="senderEmail"
+                    name="senderEmail"
+                    placeholder="Enter email here..."
+                    required
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -77,11 +131,15 @@ export const Contact = () => {
                   <input
                     className="border-2 rounded-lg p-3 border-gray-300"
                     type="text"
-                    name="message"
+                    id="senderHomeAddress"
+                    name="senderHomeAddress"
+                    placeholder="Enter full home address here..."
+                    required
+                    onChange={handleChange}
                   ></input>
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
-                  Get A Cash Offer
+                  Get A Cash Offer Now!
                 </button>
               </form>
             </div>

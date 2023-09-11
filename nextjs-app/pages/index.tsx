@@ -1,4 +1,4 @@
-import { About, Contact, Main, Navbar, OurServices } from "components";
+import { About, Contact, LandingHero, Navbar, OurServices } from "components";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
           <link rel="favicon" href="/favicon.ico" />
         </Head>
         <Navbar />
-        <Main />
+        <LandingHero />
         <About />
         <OurServices />
         <Contact />
