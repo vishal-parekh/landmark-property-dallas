@@ -70,7 +70,7 @@ export const Contact = () => {
                   Nayan Parekh
                 </h2>
                 <p className="py-2 flex items-center justify-center">
-                  Real Estate Agent
+                  Investor & Real Estate Agent
                 </p>
               </div>
               <div>
