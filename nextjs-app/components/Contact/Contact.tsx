@@ -14,6 +14,9 @@ const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER as string;
 if (typeof window !== "undefined") {
   injectStyle();
 }
+const sendEmailToViaClient = () => {
+  window.location.href = "mailto:" + EMAIL_SEND_TO;
+};
 const callNumber = () => {
   window.location.href = "tel:" + PHONE_NUMBER;
 };
@@ -76,7 +79,7 @@ export const Contact = () => {
               <div>
                 <div className="flex items-center justify-center py-4">
                   <div
-                    onClick={() => window.open(EMAIL_SEND_TO)}
+                    onClick={sendEmailToViaClient}
                     className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
                   >
                     <AiOutlineMail />
