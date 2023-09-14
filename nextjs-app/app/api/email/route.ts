@@ -1,4 +1,4 @@
-import { ContactFormEmail } from "../../../components/email-template";
+import { NewLeadEmail } from "../../templates/NewLeadEmail";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
@@ -12,9 +12,9 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "Home Seller Leads <onboarding@resend.dev>",
       to: EMAIL_SEND_TO,
-      subject: "New Lead!",
+      subject: "New Lead Submitted!",
       reply_to: senderEmail,
-      react: ContactFormEmail({
+      react: NewLeadEmail({
         senderName,
         senderPhoneNumber,
         senderHomeAddress,
@@ -26,7 +26,9 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     if (error instanceof Error) {
-      console.log(`Failed to send email: ${error.message}`);
+      /* eslint-disable no-console */
+      console.error(`Failed to send email: ${error.message}`);
+      /* eslint-enable no-console */
     }
     return NextResponse.json({
       error: "Internal server error.",
