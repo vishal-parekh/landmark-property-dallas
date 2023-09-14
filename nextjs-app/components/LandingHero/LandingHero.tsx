@@ -42,11 +42,11 @@ export const LandingHero = () => {
     /* eslint-enable no-console */
   };
   return (
-    <div id="contact" className="w-full  m-auto">
-      <div className="max-w-[1240px] px-2 pt-40 w-full m-auto">
+    <div id="landing-hero" className="w-full pt-60 pb-20">
+      <div className="max-w-[1240px] px-2 w-full m-auto">
         <div className="grid md:grid-cols-10 gap-12">
           {/* left */}
-          <div className="flex items-center pl-10 md:col-span-5">
+          <div className="flex items-center px-10 md:col-span-5">
             <div className="white-space:nowrap">
               <p className="uppercase text-sm tracking-widest text-gray-600">
                 We buy houses fast, easy, and hassle-free.
@@ -124,12 +124,9 @@ export const LandingHero = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <button
-                  type="submit"
-                  className="shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] w-full p-4 text-gray-100 mt-4"
-                >
-                  Get A Cash Offer Now!
-                </button>
+                <div className="flex justify-center">
+                  <button className="p-4 mt-4">Get A Cash Offer Now!</button>
+                </div>
               </form>
             </div>
           </div>

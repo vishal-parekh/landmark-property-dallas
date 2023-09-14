@@ -8,10 +8,15 @@ import { ToastContainer, toast } from "react-toastify";
 import { injectStyle } from "react-toastify/dist/inject-style";
 import { FormValues } from "types/form";
 
+const EMAIL_SEND_TO = process.env.NEXT_PUBLIC_EMAIL as string;
+const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER as string;
+
 if (typeof window !== "undefined") {
   injectStyle();
 }
-
+const callNumber = () => {
+  window.location.href = "tel:" + PHONE_NUMBER;
+};
 export const Contact = () => {
   const [values, setValues] = useState<FormValues>();
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -47,15 +52,15 @@ export const Contact = () => {
     /* eslint-enable no-console */
   };
   return (
-    <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 w-full ">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">
+    <div id="contact" className="w-full py-20">
+      <div className="max-w-[1240px] m-auto first-letter:first-line: px-6 py-2">
+        <p className="text-xl tracking-widest uppercase text-[#118c4f]">
           Contact
         </p>
         <h2 className="py-4">Get In Touch</h2>
         <div className="grid lg:grid-cols-4 gap-8">
           {/* left */}
-          <div className="col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+          <div className="col-span-2 w-full h-full shadow-xl shadow-gray-400 p-4">
             <div className="lg:p-4 h-full">
               <div className="flex items-center justify-center pb-6">
                 <Image src={ContactImg} height={250} width={250} alt="/" />
@@ -70,11 +75,17 @@ export const Contact = () => {
               </div>
               <div>
                 <div className="flex items-center justify-center py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                  <div
+                    onClick={() => window.open(EMAIL_SEND_TO)}
+                    className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+                  >
                     <AiOutlineMail />
                   </div>
                   <a>
-                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                    <div
+                      onClick={callNumber}
+                      className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+                    >
                       <AiOutlinePhone />
                     </div>
                   </a>
@@ -84,7 +95,7 @@ export const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="col-span-2 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-2 h-auto shadow-xl shadow-gray-400 lg:p-4">
             <div className="p-4">
               <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="flex flex-col">
@@ -138,9 +149,11 @@ export const Contact = () => {
                     onChange={handleChange}
                   ></input>
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
-                  Get A Cash Offer Now!
-                </button>
+                <div className="flex justify-center">
+                  <button className="w-80 p-4 mt-4">
+                    Get A Cash Offer Now!
+                  </button>
+                </div>
               </form>
             </div>
           </div>
@@ -150,7 +163,7 @@ export const Contact = () => {
             <a>
               <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
                 <HiOutlineChevronDoubleUp
-                  className="text-[#5651e5]"
+                  className="text-[#118c4f]"
                   size={30}
                 />
               </div>
