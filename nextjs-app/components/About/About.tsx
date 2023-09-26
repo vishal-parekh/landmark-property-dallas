@@ -14,9 +14,9 @@ export const About = () => {
             <h2 className="py-4">We can:</h2>
             <ul>
               <ol className="list-disc list-inside">
-                <li>Buy your home for a fair price</li>
-                <li>Help you with a forclosure</li>
-                <li>Help pay your down payment</li>
+                <li className="text-xl">Buy your home for a fair price</li>
+                <li className="text-xl">Help you with a forclosure</li>
+                <li className="text-xl">Help pay your down payment</li>
               </ol>
             </ul>
           </div>

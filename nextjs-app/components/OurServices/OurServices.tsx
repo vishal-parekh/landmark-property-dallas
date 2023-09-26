@@ -13,7 +13,7 @@ export const OurServices = () => {
             Our Services
           </p>
           <h2 className="pt-4 pb-14">Why Sell To Us</h2>
-          <div className="grid grid-cols-3 gap-8 align-items:center">
+          <div className="grid md:grid-cols-3 gap-8 align-items:center">
             <div className="p-6 shadow-xl hover:scale-105 ease-in duration-300">
               <div className="grid gap-4 justify-center items-center">
                 <div className="m-auto">
