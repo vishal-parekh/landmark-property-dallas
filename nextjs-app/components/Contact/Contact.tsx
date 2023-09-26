@@ -1,4 +1,4 @@
-import ContactImg from "/public/assets/contact.png";
+import profileImg from "/public/assets/profileImg.png";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -66,7 +66,7 @@ export const Contact = () => {
           <div className="col-span-2 w-full h-full shadow-xl shadow-gray-400 p-4">
             <div className="lg:p-4 h-full">
               <div className="flex items-center justify-center pb-6">
-                <Image src={ContactImg} height={250} width={250} alt="/" />
+                <Image src={profileImg} height={250} width={250} alt="/" />
               </div>
               <div>
                 <h2 className="py-2 flex items-center justify-center">
@@ -103,7 +103,7 @@ export const Contact = () => {
               <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="flex flex-col">
                   <ToastContainer />
-                  <label className="uppercase text-sm py-2">Name</label>
+                  <label className="uppercase text-md py-2">Name</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
@@ -115,7 +115,7 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Phone Number</label>
+                  <label className="uppercase text-md py-2">Phone Number</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
@@ -127,7 +127,7 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Email</label>
+                  <label className="uppercase text-md py-2">Email</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
@@ -139,7 +139,7 @@ export const Contact = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">
+                  <label className="uppercase text-md py-2">
                     Full Home Address
                   </label>
                   <input

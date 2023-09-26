@@ -1,4 +1,4 @@
-import SalePendingImg from "/public/assets/salePending.png";
+import salePendingImg from "/public/assets/salePendingImg.png";
 import Image from "next/image";
 import React from "react";
 
@@ -14,14 +14,14 @@ export const About = () => {
             <h2 className="py-4">We can:</h2>
             <ul>
               <ol className="list-disc list-inside">
-                <li>Buy your home for a fair price</li>
-                <li>Help you with a forclosure</li>
-                <li>Help pay your down payment</li>
+                <li className="text-xl">Buy your home for a fair price</li>
+                <li className="text-xl">Help you with a forclosure</li>
+                <li className="text-xl">Help pay your down payment</li>
               </ol>
             </ul>
           </div>
           <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-            <Image src={SalePendingImg} alt="/" />
+            <Image src={salePendingImg} alt="/" />
           </div>
         </div>
       </div>

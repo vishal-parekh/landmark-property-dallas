@@ -1,4 +1,4 @@
-import NavLogo from "/public/assets/navLogo.png";
+import logoImg from "/public/assets/logoImg.png";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -36,7 +36,7 @@ export const Navbar = () => {
         <div className="items-center py-6 pl-10 pr-8">
           <Link href="/">
             <Image
-              src={NavLogo}
+              src={logoImg}
               alt="/"
               width="250"
               height="65"
@@ -46,16 +46,16 @@ export const Navbar = () => {
         </div>
         <div className="flex-start pr-8">
           <ul style={{ color: "#1f2937" }} className="hidden md:flex">
-            <li className="ml-10 text-sm uppercase hover:border-b">
+            <li className="ml-10 text-md uppercase hover:border-b">
               <Link href="/">Home</Link>
             </li>
-            <li className="ml-10 text-sm uppercase hover:border-b">
+            <li className="ml-10 text-md uppercase hover:border-b">
               <Link href="/#about">About</Link>
             </li>
-            <li className="ml-10 text-sm text-center uppercase hover:border-b">
+            <li className="ml-10 text-md text-center uppercase hover:border-b">
               <Link href="/#our-services">Our Services</Link>
             </li>
-            <li className="ml-10 text-sm text-center uppercase hover:border-b">
+            <li className="ml-10 text-md text-center uppercase hover:border-b">
               <Link href="/#contact">Sell Your Home</Link>
             </li>
           </ul>
@@ -90,7 +90,7 @@ export const Navbar = () => {
             <div className="flex w-full items-center justify-between">
               <Link href="/">
                 <a>
-                  <Image src={NavLogo} width="235" height="50" alt="/" />
+                  <Image src={logoImg} width="235" height="50" alt="/" />
                 </a>
               </Link>
               <div className="pl-8">
