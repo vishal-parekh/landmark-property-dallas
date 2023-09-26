@@ -1,6 +1,6 @@
-import BuildingImage from "/public/assets/buildingIcon.png";
-import ContractImage from "/public/assets/contractIcon.png";
-import ExperienceTrustImage from "/public/assets/customerExperienceIcon.png";
+import processImg from "/public/assets/processImg.jpg";
+import relocationImg from "/public/assets/relocationImg.jpg";
+import trustImg from "/public/assets/trustImg.jpg";
 import Image from "next/image";
 import React from "react";
 
@@ -17,7 +17,7 @@ export const OurServices = () => {
             <div className="p-6 shadow-xl hover:scale-105 ease-in duration-300">
               <div className="grid gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={ContractImage} alt="/" />
+                  <Image src={processImg} alt="/" />
                 </div>
                 <div className="flex flex-col items-center justify-center">
                   <h3 className="text-center">FAST & EASY PROCESS</h3>
@@ -32,7 +32,7 @@ export const OurServices = () => {
             <div className="p-6 shadow-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-1 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={BuildingImage} alt="/" />
+                  <Image src={relocationImg} alt="/" />
                 </div>
                 <div className="flex flex-col items-center justify-center">
                   <h3 className="text-center">TEMPORARY RELOCATION</h3>
@@ -46,7 +46,7 @@ export const OurServices = () => {
             <div className="p-6 shadow-xl hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-1 gap-4 justify-center items-center">
                 <div className="m-auto">
-                  <Image src={ExperienceTrustImage} alt="/" />
+                  <Image src={trustImg} alt="/" />
                 </div>
                 <div className="flex flex-col items-center justify-center">
                   <h3 className="text-center">EXPERIENCE & TRUST</h3>

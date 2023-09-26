@@ -1,4 +1,4 @@
-import SalePendingImg from "/public/assets/salePending.png";
+import salePendingImg from "/public/assets/salePendingImg.png";
 import Image from "next/image";
 import React from "react";
 
@@ -21,7 +21,7 @@ export const About = () => {
             </ul>
           </div>
           <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
-            <Image src={SalePendingImg} alt="/" />
+            <Image src={salePendingImg} alt="/" />
           </div>
         </div>
       </div>

@@ -26,8 +26,10 @@ export const LandingHero = () => {
           senderHomeAddress: values?.senderHomeAddress,
         }),
       });
+      const data = await response.json();
+
       /* eslint-disable no-console */
-      if (response.ok) {
+      if (!data.error) {
         toast.success("Submission successful!");
       } else {
         console.error(
@@ -48,11 +50,11 @@ export const LandingHero = () => {
           {/* left */}
           <div className="flex items-center px-10 md:col-span-5">
             <div className="white-space:nowrap">
-              <p className="uppercase text-sm tracking-widest text-gray-600">
+              <p className="uppercase text-lg tracking-widest text-gray-800">
                 We buy houses fast, easy, and hassle-free.
               </p>
               <h1 className="text-gray-700">
-                No Hassles.
+                No Fees.
                 <span>
                   <br />
                   No Obligations.
@@ -62,7 +64,7 @@ export const LandingHero = () => {
                   Fair Offer Guarantee.
                 </span>
               </h1>
-              <p className="py-4 text-gray-600 sm:max-w-[70%]">
+              <p className="py-4 text-gray-600 text-lg sm:max-w-[70%]">
                 Sell us your house! No matter what type of home you have; house,
                 condo, or duplex. Landmark Property would like to make a
                 no-obligation, cash offer to purchase your house “as is.”
@@ -75,7 +77,7 @@ export const LandingHero = () => {
               <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="flex flex-col">
                   <ToastContainer />
-                  <label className="uppercase text-sm py-2">Name</label>
+                  <label className="uppercase text-md py-2">Name</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
@@ -87,7 +89,7 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Phone Number</label>
+                  <label className="uppercase text-md py-2">Phone Number</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
@@ -99,7 +101,7 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">Email</label>
+                  <label className="uppercase text-md py-2">Email</label>
                   <input
                     className="border-2 rounded-lg p-3 flex border-gray-300"
                     type="text"
@@ -111,7 +113,7 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-sm py-2">
+                  <label className="uppercase text-md py-2">
                     Full Home Address
                   </label>
                   <input
