@@ -44,7 +44,10 @@ export const LandingHero = () => {
     /* eslint-enable no-console */
   };
   return (
-    <div id="landing-hero" className="w-full pt-40 pb-20 bg-[url('../public/assets/aerialSubdivision.jpg')] bg-cover">
+    <div
+      id="landing-hero"
+      className="w-full pt-40 pb-20 bg-[url('../public/assets/aerialSubdivision.jpg')] bg-cover"
+    >
       <div className="max-w-[1240px] px-2 w-full m-auto">
         <div className="grid md:grid-cols-10 gap-12">
           {/* left */}
@@ -66,8 +69,8 @@ export const LandingHero = () => {
               </h1>
               <p className="py-4 text-white text-lg sm:max-w-[70%]">
                 Sell us your house! No matter what type of home you have; house,
-                condo, or duplex. Landmark Property will make a
-                fair cash offer to purchase your house as is.
+                condo, or duplex. Landmark Property will make a fair cash offer
+                to purchase your house as is.
               </p>
             </div>
           </div>
@@ -77,9 +80,11 @@ export const LandingHero = () => {
               <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="flex flex-col">
                   <ToastContainer />
-                  <label className="uppercase text-md py-2 text-white">Name</label>
+                  <label className="uppercase text-md py-2 text-white">
+                    Name
+                  </label>
                   <input
-                    className="border-1 rounded-md p-3 flex"
+                    className="border-4 border-gray-700 rounded-md p-3 flex"
                     type="text"
                     id="senderName"
                     name="senderName"
@@ -89,9 +94,11 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-md py-2 text-white">Phone Number</label>
+                  <label className="uppercase text-md py-2 text-white">
+                    Phone Number
+                  </label>
                   <input
-                    className="border-1 rounded-md p-3 flex"
+                    className="border-4 border-gray-700 rounded-md p-3 flex"
                     type="text"
                     id="senderPhoneNumber"
                     name="senderPhoneNumber"
@@ -101,9 +108,11 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-md py-2 text-white">Email</label>
+                  <label className="uppercase text-md py-2 text-white">
+                    Email
+                  </label>
                   <input
-                    className="border-1 rounded-md p-3 flex"
+                    className="border-4 border-gray-700 rounded-md p-3 flex"
                     type="text"
                     id="senderEmail"
                     name="senderEmail"
@@ -117,7 +126,7 @@ export const LandingHero = () => {
                     Full Home Address
                   </label>
                   <input
-                    className="border-1 rounded-md p-3 flex"
+                    className="border-4 border-gray-700 rounded-md p-3 flex"
                     type="text"
                     id="senderHomeAddress"
                     name="senderHomeAddress"
