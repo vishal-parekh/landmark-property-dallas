@@ -57,13 +57,13 @@ export const Contact = () => {
   return (
     <div id="contact" className="w-full py-20">
       <div className="max-w-[1240px] m-auto first-letter:first-line: px-6 py-2">
-        <p className="text-xl tracking-widest uppercase text-[#118c4f]">
+        <p className="text-xl tracking-widest uppercase text-[#11ae5f]">
           Contact
         </p>
         <h2 className="py-4">Get In Touch</h2>
         <div className="grid lg:grid-cols-4 gap-8">
           {/* left */}
-          <div className="col-span-2 w-full h-full shadow-xl shadow-gray-400 p-4">
+          <div className="col-span-2 w-full h-full shadow-lg shadow-gray-600 p-4">
             <div className="lg:p-4 h-full">
               <div className="flex items-center justify-center pb-6">
                 <Image src={profileImg} height={250} width={250} alt="/" />
@@ -80,14 +80,14 @@ export const Contact = () => {
                 <div className="flex items-center justify-center py-4">
                   <div
                     onClick={sendEmailToViaClient}
-                    className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+                    className="rounded-full shadow-lg shadow-gray-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
                   >
                     <AiOutlineMail />
                   </div>
                   <a>
                     <div
                       onClick={callNumber}
-                      className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
+                      className="rounded-full shadow-lg shadow-gray-600 p-6 cursor-pointer hover:scale-110 ease-in duration-300"
                     >
                       <AiOutlinePhone />
                     </div>
@@ -98,14 +98,14 @@ export const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="col-span-2 h-auto shadow-xl shadow-gray-400 lg:p-4">
+          <div className="col-span-2 h-auto shadow-lg shadow-gray-600 lg:p-3">
             <div className="p-4">
               <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="flex flex-col">
                   <ToastContainer />
                   <label className="uppercase text-md py-2">Name</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-2 rounded-lg p-3 flex border-gray-400"
                     type="text"
                     id="senderName"
                     name="senderName"
@@ -117,7 +117,7 @@ export const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-md py-2">Phone Number</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-2 rounded-lg p-3 flex border-gray-400"
                     type="text"
                     id="senderPhoneNumber"
                     name="senderPhoneNumber"
@@ -129,7 +129,7 @@ export const Contact = () => {
                 <div className="flex flex-col py-2">
                   <label className="uppercase text-md py-2">Email</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-2 rounded-lg p-3 flex border-gray-400"
                     type="text"
                     id="senderEmail"
                     name="senderEmail"
@@ -143,7 +143,7 @@ export const Contact = () => {
                     Full Home Address
                   </label>
                   <input
-                    className="border-2 rounded-lg p-3 border-gray-300"
+                    className="border-2 rounded-lg p-3 border-gray-400"
                     type="text"
                     id="senderHomeAddress"
                     name="senderHomeAddress"

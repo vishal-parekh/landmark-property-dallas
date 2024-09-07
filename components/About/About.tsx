@@ -8,10 +8,10 @@ export const About = () => {
       <div className="max-w-[1240px] px-2 w-full m-auto">
         <div className="grid md:grid-cols-2 gap-8">
           <div className="px-6">
-            <p className="uppercase text-xl tracking-widest text-[#118c4f]">
+            <p className="uppercase text-xl tracking-widest text-[#11ae5f]">
               About Landmark Property Group
             </p>
-            <h2 className="py-4">We can:</h2>
+            <h2 className="py-4">Our mission:</h2>
             <ul>
               <ol className="list-disc list-inside">
                 <li className="text-xl">Buy your home for a fair price</li>
@@ -20,7 +20,7 @@ export const About = () => {
               </ol>
             </ul>
           </div>
-          <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
+          <div className="w-full h-auto m-auto shadow-lg shadow-gray-600 flex items-center justify-center p-3 hover:scale-105 ease-in duration-300">
             <Image src={salePendingImg} alt="/" />
           </div>
         </div>

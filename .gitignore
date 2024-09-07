@@ -1,7 +1,11 @@
+.env
+.env*.local
+
 # Ignore Mac DS_Store files
 .DS_Store
 # Ignore nextjs modules and files
-/nextjs-app/.next
-/nextjs-app/node_modules
+/.next
 /node_modules
-/nextjs-app/.react-email
+/node_modules
+/.react-email
+next-env.d.ts
