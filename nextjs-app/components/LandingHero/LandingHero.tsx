@@ -44,42 +44,42 @@ export const LandingHero = () => {
     /* eslint-enable no-console */
   };
   return (
-    <div id="landing-hero" className="w-full pt-60 pb-20">
+    <div id="landing-hero" className="w-full pt-40 pb-20 bg-[url('../public/assets/aerialSubdivision.jpg')] bg-cover">
       <div className="max-w-[1240px] px-2 w-full m-auto">
         <div className="grid md:grid-cols-10 gap-12">
           {/* left */}
           <div className="flex items-center px-10 md:col-span-5">
             <div className="white-space:nowrap">
-              <p className="uppercase text-lg tracking-widest text-gray-800">
+              <p className="uppercase text-lg tracking-widest text-white font-bold">
                 We buy houses fast, easy, and hassle-free.
               </p>
-              <h1 className="text-gray-700">
+              <h1 className="text-white">
                 No Fees.
                 <span>
                   <br />
                   No Obligations.
                 </span>
-                <span className="text-[#118c4f]">
+                <span className="text-[#11ae5f]">
                   <br />
                   Fair Offer Guarantee.
                 </span>
               </h1>
-              <p className="py-4 text-gray-600 text-lg sm:max-w-[70%]">
+              <p className="py-4 text-white text-lg sm:max-w-[70%]">
                 Sell us your house! No matter what type of home you have; house,
-                condo, or duplex. Landmark Property would like to make a
-                no-obligation, cash offer to purchase your house “as is.”
+                condo, or duplex. Landmark Property will make a
+                fair cash offer to purchase your house as is.
               </p>
             </div>
           </div>
           {/* right */}
-          <div className="md:col-span-4 shadow-xl shadow-gray-400 lg:p-4">
+          <div className="md:col-span-4 lg:p-4">
             <div className="p-4">
               <form onSubmit={(e) => handleSubmit(e)}>
                 <div className="flex flex-col">
                   <ToastContainer />
-                  <label className="uppercase text-md py-2">Name</label>
+                  <label className="uppercase text-md py-2 text-white">Name</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-1 rounded-md p-3 flex"
                     type="text"
                     id="senderName"
                     name="senderName"
@@ -89,9 +89,9 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-md py-2">Phone Number</label>
+                  <label className="uppercase text-md py-2 text-white">Phone Number</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-1 rounded-md p-3 flex"
                     type="text"
                     id="senderPhoneNumber"
                     name="senderPhoneNumber"
@@ -101,9 +101,9 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-md py-2">Email</label>
+                  <label className="uppercase text-md py-2 text-white">Email</label>
                   <input
-                    className="border-2 rounded-lg p-3 flex border-gray-300"
+                    className="border-1 rounded-md p-3 flex"
                     type="text"
                     id="senderEmail"
                     name="senderEmail"
@@ -113,11 +113,11 @@ export const LandingHero = () => {
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className="uppercase text-md py-2">
+                  <label className="uppercase text-md py-2 text-white">
                     Full Home Address
                   </label>
                   <input
-                    className="border-2 rounded-lg p-3 border-gray-300"
+                    className="border-1 rounded-md p-3 flex"
                     type="text"
                     id="senderHomeAddress"
                     name="senderHomeAddress"

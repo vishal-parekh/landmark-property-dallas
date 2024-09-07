@@ -9,12 +9,12 @@ export const OurServices = () => {
     <div id="our-services" className="w-full py-20">
       <div className="max-w-[1240px] mx-auto w-full">
         <div className="px-6">
-          <p className="text-xl tracking-widest uppercase text-[#118c4f]">
+          <p className="text-xl tracking-widest uppercase text-[#11ae5f]">
             Our Services
           </p>
           <h2 className="pt-4 pb-14">Why Sell To Us</h2>
           <div className="grid md:grid-cols-3 gap-8 align-items:center">
-            <div className="p-6 shadow-xl hover:scale-105 ease-in duration-300">
+            <div className="p-3 shadow-lg shadow-gray-600 hover:scale-105 ease-in duration-300">
               <div className="grid gap-4 justify-center items-center">
                 <div className="m-auto">
                   <Image src={processImg} alt="/" />
@@ -29,7 +29,7 @@ export const OurServices = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 shadow-xl hover:scale-105 ease-in duration-300">
+            <div className="p-3 shadow-lg shadow-gray-600 hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-1 gap-4 justify-center items-center">
                 <div className="m-auto">
                   <Image src={relocationImg} alt="/" />
@@ -43,7 +43,7 @@ export const OurServices = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 shadow-xl hover:scale-105 ease-in duration-300">
+            <div className="p-3 shadow-lg shadow-gray-600 hover:scale-105 ease-in duration-300">
               <div className="grid grid-cols-1 gap-4 justify-center items-center">
                 <div className="m-auto">
                   <Image src={trustImg} alt="/" />

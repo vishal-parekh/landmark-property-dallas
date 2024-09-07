@@ -28,11 +28,11 @@ export const Navbar = () => {
       style={{ backgroundColor: "#ecf0f3" }}
       className={
         shadow
-          ? "fixed w-full h-[120px] shadow-xl z-[100] ease-in-out duration-300"
-          : "fixed w-full h-[120px] z-[100]"
+          ? "fixed w-full h-[120px] z-[100] ease-in-out duration-300"
+          : "w-full h-[120px] z-[100]"
       }
     >
-      <div className="flex items-center px-8 pt-2 pb-10 2xl:px-16">
+      <div className="flex items-center px-8 py-1 2xl:px-16">
         <div className="items-center py-6 pl-10 pr-8">
           <Link href="/">
             <Image

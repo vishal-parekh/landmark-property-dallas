@@ -11,7 +11,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    @apply bg-[#ecf0f3] text-[#000000];
   }
 
   h1,
@@ -28,7 +28,7 @@ html {
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl;
+    @apply text-3xl sm:text-4xl font-[Raleway];
   }
 
   li {
@@ -36,6 +36,6 @@ html {
   }
 
   button {
-    @apply shadow-xl shadow-gray-400 rounded-xl uppercase text-gray-100 bg-gradient-to-r from-[#118c4f] to-[rgb(106,173,138)];
+    @apply  rounded-lg uppercase text-white font-semibold bg-gradient-to-r from-[#11ae5f] to-[rgb(106,173,138)];
   }
 }
