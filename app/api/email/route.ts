@@ -1,6 +1,6 @@
-import { NewLeadEmail } from "../../templates/NewLeadEmail";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { NewLeadEmail } from "../../templates/NewLeadEmail";
 
 const EMAIL_SEND_TO = process.env.NEXT_PUBLIC_EMAIL as string;
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       from: "Home Seller Leads <onboarding@resend.dev>",
       to: EMAIL_SEND_TO,
       subject: "New Lead Submitted!",
-      reply_to: senderEmail,
+      replyTo: senderEmail,
       react: NewLeadEmail({
         senderName,
         senderPhoneNumber,

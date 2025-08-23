@@ -1,4 +1,3 @@
-import profileImg from "/public/assets/profileImg.png";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -7,6 +6,7 @@ import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { ToastContainer, toast } from "react-toastify";
 import { injectStyle } from "react-toastify/dist/inject-style";
 import { FormValues } from "types/form";
+import profileImg from "/public/assets/profileImg.png";
 
 const EMAIL_SEND_TO = process.env.NEXT_PUBLIC_EMAIL as string;
 const PHONE_NUMBER = process.env.NEXT_PUBLIC_PHONE_NUMBER as string;
@@ -163,14 +163,12 @@ export const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link href="/">
-            <a>
-              <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-                <HiOutlineChevronDoubleUp
-                  className="text-[#118c4f]"
-                  size={30}
-                />
-              </div>
-            </a>
+            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+              <HiOutlineChevronDoubleUp
+                className="text-[#118c4f]"
+                size={30}
+              />
+            </div>
           </Link>
         </div>
       </div>

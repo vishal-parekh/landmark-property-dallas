@@ -1,8 +1,8 @@
-import logoImg from "/public/assets/logoImg.png";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import logoImg from "/public/assets/logoImg.png";
 
 export const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -89,9 +89,7 @@ export const Navbar = () => {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href="/">
-                <a>
-                  <Image src={logoImg} width="235" height="50" alt="/" />
-                </a>
+                <Image src={logoImg} width="235" height="50" alt="/" />
               </Link>
               <div className="pl-8">
                 <div
@@ -105,26 +103,26 @@ export const Navbar = () => {
           </div>
           <div className="py-4 flex flex-col">
             <ul className="uppercase">
-              <Link href="/">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/">
                   Home
-                </li>
-              </Link>
-              <Link href="/#about">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                </Link>
+              </li>
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/#about">
                   About
-                </li>
-              </Link>
-              <Link href="/#our-services">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                </Link>
+              </li>
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/#our-services">
                   Our Services
-                </li>
-              </Link>
-              <Link href="/#contact">
-                <li onClick={() => setNav(false)} className="py-4 text-sm">
+                </Link>
+              </li>
+              <li onClick={() => setNav(false)} className="py-4 text-sm">
+                <Link href="/#contact">
                   Contact
-                </li>
-              </Link>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
