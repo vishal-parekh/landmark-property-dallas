@@ -5,7 +5,21 @@ import { NewLeadEmail } from "../../templates/NewLeadEmail";
 const EMAIL_SEND_TO = process.env.NEXT_PUBLIC_EMAIL as string;
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
+const ALLOWED_COUNTRIES = ["US"];
+
 export async function POST(request: Request) {
+  const country = request.headers.get("x-vercel-ip-country");
+
+  if (!country || !ALLOWED_COUNTRIES.includes(country)) {
+    return NextResponse.json(
+      {
+        error: "Submissions are currently only accepted from the United States.",
+        status: 403,
+      },
+      { status: 403 }
+    );
+  }
+
   const { senderName, senderPhoneNumber, senderEmail, senderHomeAddress } =
     await request.json();
   try {
