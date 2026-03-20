@@ -1,4 +1,3 @@
-import { code, container, footer, h1, link, main, text } from "./styled";
 import {
   Body,
   Container,
@@ -10,7 +9,7 @@ import {
   Preview,
   Text,
 } from "@react-email/components";
-import * as React from "react";
+import { code, container, footer, h1, link, main, text } from "./styled";
 
 interface EmailProps {
   senderName: string;
@@ -48,7 +47,7 @@ export const NewLeadEmail = ({
           </Text>
           <Img
             src={
-              "https://www.landmarkpropertydallas.com/static/img/logored.png"
+              "https://landmarkpropertydallas.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FlogoImg.500d2c75.png&w=640&q=75"
             }
             width="250"
             height="65"
